@@ -2,20 +2,16 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  respond_to :html
 
   def index
     @pins = Pin.all
-    respond_with(@pins)
   end
 
   def show
-    respond_with(@pin)
   end
 
   def new
     @pin = current_user.pins.build
-    respond_with(@pins)
   end
 
   def edit
@@ -31,13 +27,16 @@ class PinsController < ApplicationController
   end
 
   def update
-    @pin.update(pin_params)
-    respond_with(@pin)
+    if @pin.update(pin_params)
+      redirect_to @pin, notie: 'Pin was successfully updated'
+    else
+      render action: 'edit'
+    end
   end
 
   def destroy
     @pin.destroy
-    respond_with(@pin)
+    redirect_to pins_url
   end
 
   private
