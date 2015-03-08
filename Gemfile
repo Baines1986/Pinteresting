@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+# jQuery masonry gem
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -33,6 +35,9 @@ gem 'paperclip', '~> 4.2.1'
 
 # Amazon Web Service GEM
 gem 'aws-sdk', '< 2.0'
+
+# jQuery masonry gem
+gem 'masonry-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
