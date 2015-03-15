@@ -7,7 +7,7 @@ $navbar-default-bg: 			white;
 $navbar-default-brand-color: 	#e74c3c;
 $brand-primary: 				#e74c3c;
 $jumbotron-bg: 					white;
-
+$icon-font-path: 'bootstrap/';
 
 @import 'bootstrap';
 
@@ -18,4 +18,3 @@ $jumbotron-bg: 					white;
 .navbar-brand {
 	font-weight: bold;
 }
-
